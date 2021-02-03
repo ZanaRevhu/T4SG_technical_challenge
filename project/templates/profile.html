@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  Welcome, User!
+</h1>
+
+<p>
+  Thank you for signing up with the WHO Covid Vaccine Platform. The purpose of this platform is to track and monitor how vaccine adminstration is going worldwide. We would appreciate your input on whether you have been vaccinated or not and your opinions on the vaccine.
+</p>
+
+<section class="hero is-primary is-fullheight">
+
+  <div class="hero-head">
+      <nav class="navbar">
+          <div class="container">
+
+              <div id="navbarMenuHeroA" class="navbar-menu">
+                  <div class="navbar-end">
+                      <a href="{{ url_for('main.survey') }}" class="navbar-item">
+                          Complete survey
+                      </a>
+                  </div>
+              </div>
+          </div>
+      </nav>
+  </div>
+
+{% endblock %}

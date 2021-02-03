@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <h3 class="title">Survey</h3>
+    <div class="box">
+        <form method="POST" action="/survey">
+
+            <div class="field">
+                <label for="vaccinated?">Have you been vaccinated</label>
+                <select autocomplete="off" id="vaccinated" name="vaccinated">
+                    <option disabled selected value=""> Yes or No</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="field">
+                <label for="vaccinated?">Have people in your area been vaccinated?</label>
+                <select autocomplete="off" id="vaccinated" name="vaccinated">
+                    <option disabled selected value=""> Choose the most appropriate response below</option>
+                    <option value="most">Yes, most of them</option>
+                    <option value="few">Yes, only a few</option>
+                    <option value="unavailable">No, vaccine not available in country/area</option>
+                    <option value="uninterested">No, people are not interested</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="username" placeholder="city/town/village name" autofocus="">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="name" placeholder="Name of nearest hospital or clinic" autofocus="">
+                </div>
+            </div>
+
+            <button class="button is-block is-info is-large is-fullwidth">Submit</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
